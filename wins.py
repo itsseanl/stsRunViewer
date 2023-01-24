@@ -10,8 +10,8 @@ twDir = r"C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\runs\WATCHE
 
 # run list_wins function
 icWins = stsRuns(icDir)
-icWins.return_wins(True, True)
-
+# icWins.return_wins(True, True)
+icWins.write_to_csv()
 
 
 
