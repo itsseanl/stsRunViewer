@@ -42,8 +42,6 @@ class stsRuns:
                 # write row to the csv file
                 writer.writerow(row)
                
-
-
     # returns wins
     def return_wins(self, deck=None, relics=None, allData=None):
             for win in self.wins:
@@ -55,32 +53,28 @@ class stsRuns:
                         self.return_relics(win["relics"])
                 if (allData):
                     print(self.wins)
-
+   
+    # return deck with card desciptions
     def return_deck(self, deck):
         deck_descriptions = []
         with open("./cards.json", "r") as cards_list:
             file_contents = cards_list.read()
             master_cards = json.loads(file_contents)
-            # print(master_cards["A Thousand Cuts"])
-            # print(type(master_cards))
         for card in deck:
             for k, v in master_cards.items():
                 if (card == k):
                     deck_descriptions.append({'name': k, 'description': v["DESCRIPTION"] })
         print(deck_descriptions)
     
+    #return relics with descriptions
     def return_relics(self, relics):
         relics_descriptions = []
         with open("./relics.json", "r") as relic_list:
             file_contents = relic_list.read()
             master_relics = json.loads(file_contents)
-            # print(master_cards["A Thousand Cuts"])
-            # print(type(master_cards))
         for relic in relics:
             for k, v in master_relics.items():
                 if (relic == k):
-                    # print(k)
-                    # print(v["DESCRIPTION"])
                     s = " "
                     relics_descriptions.append({'name': k, 'description': s.join(v["DESCRIPTIONS"]) })
         print(relics_descriptions)
