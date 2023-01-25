@@ -15,4 +15,4 @@ the .run files do not include card or relic descriptions, so there are two helpe
 
 ### write_to_csv
 
-Self explanatory: this method saves all run data to a CSV.
+This method saves the passed run data to a CSV. Currently supports passing either all run data, or just winning data.
