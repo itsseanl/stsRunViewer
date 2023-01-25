@@ -62,8 +62,8 @@ class stsRuns:
             master_cards = json.loads(file_contents)
         for card in deck:
             for k, v in master_cards.items():
-                if (card == k):
-                    deck_descriptions.append({'name': k, 'description': v["DESCRIPTION"] })
+                if (card.__contains__(k)):
+                    deck_descriptions.append({'name': card, 'description': v["DESCRIPTION"] })
         print(deck_descriptions)
     
     #return relics with descriptions

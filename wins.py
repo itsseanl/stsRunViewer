@@ -7,11 +7,11 @@ tsDir = r"C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\runs\THE_SI
 dDir = r"C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\runs\DEFECT"
 twDir = r"C:\Program Files (x86)\Steam\steamapps\common\SlayTheSpire\runs\WATCHER"
 
+dWins.write_to_csv()
 
-# run list_wins function
-icWins = stsRuns(icDir)
-# icWins.return_wins(True, True)
-icWins.write_to_csv()
+
+dWins = stsRuns(dDir)
+dWins.return_wins(True, True)
 
 
 
